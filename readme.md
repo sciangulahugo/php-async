@@ -38,7 +38,7 @@ En este ejemplo, se crea una tarea asíncrona que simula una operación de larga
 Para instalar esta biblioteca, puedes usar Composer:
 
 ```bash 
-composer require sciangulahugo/async
+composer require sciangulahugo/php-async
 ```
 
 ## Contribución:
