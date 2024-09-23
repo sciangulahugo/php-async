@@ -1,8 +1,8 @@
 <?php
 
-$autoload = "/vendor/autoload.php";
+$autoload = "/autoload.php";
 
-if (file_exists(dirname(__DIR__, 1) . $autoload)) {
+if (file_exists(dirname(__DIR__, 1) . "/vendor/" . $autoload)) {
     require_once dirname(__DIR__, 1) . $autoload;
 } else if (file_exists(dirname(__DIR__, 3) . $autoload)) {
     require_once dirname(__DIR__, 3) . $autoload;
