@@ -1,6 +1,6 @@
 <?php
 
-use SciangulaHugo\Async\ClosureWrapper;
+use SciangulaHugo\Closure\ClosureWrapper;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 

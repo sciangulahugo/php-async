@@ -10,16 +10,15 @@ Esta biblioteca proporciona una forma sencilla de ejecutar código PHP de manera
 ## Ejemplo de uso:
 
 ```php
-require_once 'vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-use SciangulaHugo\Async\Async;
+use SciangulaHugo\Closure\Async;
 
 $async = new Async();
 
 $async->create(function () {
-    echo "Tarea en segundo plano ejecutándose...\n";
-    sleep(2);
-    echo "Tarea en segundo plano completada.\n";
+    sleep(10);
+    file_put_contents('output.txt', 'Hello World');
 });
 
 $async->run();

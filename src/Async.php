@@ -1,17 +1,15 @@
 <?php
 
-namespace SciangulaHugo\Async;
+namespace SciangulaHugo\Closure;
 
 use Closure;
-use SciangulaHugo\Async\ClosureWrapper;
+use SciangulaHugo\Closure\ClosureWrapper;
 
 /**
  * Async
  * 
- * @author Sciangula Hugo
- * 
- * created 2024-09-23 02:02
- * updated 2024-09-23 02:02
+ * created at 2024-09-23 02:02
+ * updated at 2024-09-23 02:02
  */
 
 class Async
