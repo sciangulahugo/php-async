@@ -1,5 +1,7 @@
 <?php
 
+namespace SciangulaHugo\Async;
+
 use SciangulaHugo\Closure\ClosureWrapper;
 
 $wrapper = unserialize(base64_decode($argv[1]));
