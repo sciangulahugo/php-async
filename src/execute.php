@@ -1,11 +1,20 @@
 <?php
 
-$autoload = "/autoload.php";
+$possibleAutoloadPaths = [
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../autoload.php',
+    __DIR__ . '/../../../autoload.php',
+];
 
-if (file_exists(dirname(__DIR__, 1) . "/vendor/" . $autoload)) {
-    require_once dirname(__DIR__, 1) . "/vendor/" . $autoload;
-} else if (file_exists(dirname(__DIR__, 3) . $autoload)) {
-    require_once dirname(__DIR__, 3) . $autoload;
+foreach ($possibleAutoloadPaths as $file) {
+    if (file_exists($file)) {
+        require $file;
+        break;
+    }
+}
+
+if (!class_exists('SciangulaHugo\Closure\ClosureWrapper')) {
+    throw new RuntimeException('Could not load the autoloader. Make sure the library is installed correctly.');
 }
 
 if (isset($argv[1])) {
