@@ -14,6 +14,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use SciangulaHugo\Closure\Async;
 
+$start = microtime(true);
+
 $async = new Async();
 
 $async->create(function () {
@@ -22,6 +24,11 @@ $async->create(function () {
 });
 
 $async->run();
+
+$end = microtime(true);
+
+echo "Time of execution: " . ($end - $start) . " seconds\n";
+
 ```
 
 En este ejemplo, se crea una tarea asíncrona que simula una operación de larga duración. La tarea se ejecuta en segundo plano mientras el script principal continúa ejecutándose.
