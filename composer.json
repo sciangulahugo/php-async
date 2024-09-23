@@ -14,8 +14,8 @@
             "email": "sciangulahugo@gmail.com"
         }
     ],
-    "minimum-stability": "beta",
     "require": {
+        "php": "^8.0",
         "opis/closure": "^3.6"
     }
 }
