@@ -7,7 +7,9 @@
         "psr-4": {
             "SciangulaHugo\\Closure\\": "src/"
         },
-        "files": ["src/functions.php"]
+        "files": [
+            "src/execute.php"
+        ]
     },
     "authors": [
         {

@@ -2,6 +2,7 @@
 
 namespace SciangulaHugo\Closure;
 
+use Closure;
 use Opis\Closure\SerializableClosure;
 
 /**
@@ -12,7 +13,7 @@ use Opis\Closure\SerializableClosure;
  */
 class ClosureWrapper
 {
-    public static function wrap(\Closure $closure)
+    public static function wrap(Closure $closure)
     {
         // $errorReporting = error_reporting();
         // error_reporting(0);
