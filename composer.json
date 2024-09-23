@@ -1,0 +1,21 @@
+{
+    "name": "sciangulahugo/async",
+    "description": "PHP Async",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SciangulaHugo\\Async\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sciangulahugo",
+            "email": "sciangulahugo@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "opis/closure": "^3.6"
+    }
+}

@@ -1,0 +1,5 @@
+/vendor
+.env
+x.php
+*.zip
+error_log

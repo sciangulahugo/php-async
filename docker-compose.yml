@@ -1,0 +1,18 @@
+services:
+  php:
+    container_name: async-server
+    build:
+      context: ./docker
+      dockerfile: php-8.1-xdebug.dockerfile
+    volumes:
+      - .:/var/www/html
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - 80:80
+    networks:
+      - async-network
+
+networks:
+  async-network:
+    driver: bridge
