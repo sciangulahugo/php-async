@@ -23,7 +23,10 @@ class Async
 
     public function run()
     {
-        $nullDevice = (strncasecmp(PHP_OS, 'WIN', 3) == 0) ? 'NUL' : '/dev/null';
-        exec("php " . __DIR__ . "/execute.php " . base64_encode($this->serialized) . " > $nullDevice 2>&1 &");
-    }
+        $nullDevice = (strncasecmp(PHP_OS, 'WIN', 3) == 0) ? 'NUL' : '/dev/null'; 
+        // Cambiar el comando para Windows 
+        $command = (strncasecmp(PHP_OS, 'WIN', 3) == 0)  
+            ? "start /B php " . __DIR__ . "/execute.php " . base64_encode($this->serialized) . " > $nullDevice 2>&1" 
+            : "php " . __DIR__ . "/execute.php " . base64_encode($this->serialized) . " > $nullDevice 2>&1 &"; 
+        exec($command);    }
 }
