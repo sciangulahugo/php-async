@@ -1,0 +1,2 @@
+docker/* export-ignore
+docker-compose.yml export-ignore
