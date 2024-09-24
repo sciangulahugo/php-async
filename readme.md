@@ -27,8 +27,10 @@ $async->run();
 
 $end = microtime(true);
 
-echo "Time of execution: " . ($end - $start) . " seconds\n";
+print_r("Time of execution: " . ($end - $start) . " seconds" . PHP_EOL);
 
+// Imprime "Tiempo de ejecución: 0.006659984588623 segundos"
+// El archivo output.txt se creó a las 10.006129026413 segundos después
 ```
 
 En este ejemplo, se crea una tarea asíncrona que simula una operación de larga duración. La tarea se ejecuta en segundo plano mientras el script principal continúa ejecutándose.
@@ -47,4 +49,4 @@ Si encuentras algún problema o tienes sugerencias para mejorar esta biblioteca,
 
 ## Licencia:
 
-Esta biblioteca está bajo la licencia MIT. Puedes usarla, modificarla y distribuirla libremente.
+Esta biblioteca está bajo la licencia MIT.
